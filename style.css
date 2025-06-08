@@ -1,0 +1,219 @@
+/* style.css */
+
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1s ease;
+  overflow: hidden;
+}
+
+/* Background video */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7) saturate(1.1);
+  pointer-events: none;
+}
+
+/* Weather widget container */
+.weather-widget {
+  background: 
+    linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.1)
+    );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.12),
+    0 15px 20px rgba(74, 144, 226, 0.3);
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  width: 350px;
+  max-width: 90vw;
+  padding: 40px 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #222;
+}
+
+/* Inputs and buttons */
+input, button {
+  color: #222;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 1rem;
+  outline: none;
+  margin: 10px 0;
+  text-shadow: 0 0 6px rgba(255,255,255,0.7);
+}
+
+/* Input styling */
+.weather-widget input[type="text"] {
+  width: 75%;
+  padding: 14px 18px;
+  font-size: 18px;
+  border: 2px solid #5DADE2;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 1px 1px 5px #d0e6fc;
+}
+
+.weather-widget input[type="text"]:focus {
+  border-color: #1A5276;
+  box-shadow: 0 0 8px #2980B9;
+}
+
+/* Button styling */
+.weather-widget button {
+  margin-left: 10px;
+  padding: 14px 28px;
+  font-size: 18px;
+  background: #2980B9;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 15px rgba(41, 128, 185, 0.4);
+  user-select: none;
+  text-shadow: none;
+}
+
+.weather-widget button:hover {
+  background: #1A5276;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(26, 82, 118, 0.6);
+}
+
+/* Weather info section */
+#weatherInfo {
+  margin-top: 30px;
+  min-height: 160px;
+  position: relative;
+}
+
+/* Weather icon */
+#weatherIcon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  transition: transform 0.6s ease;
+}
+
+#weatherIcon.animate {
+  animation: rotateIcon 2s linear infinite;
+}
+
+/* Temperature */
+#temperature {
+  font-size: 56px;
+  font-weight: 700;
+  color: #34495E;
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.85);
+}
+
+/* Description */
+#description {
+  font-size: 22px;
+  color: #5D6D7E;
+  margin-top: 10px;
+  font-style: italic;
+  text-transform: capitalize;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+}
+
+/* Animate weather icon */
+@keyframes rotateIcon {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Optional: subtle floating background shapes for depth */
+.weather-widget::before, .weather-widget::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(30px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.weather-widget::before {
+  width: 120px;
+  height: 120px;
+  background: #5DADE2;
+  top: -40px;
+  left: -40px;
+}
+
+.weather-widget::after {
+  width: 80px;
+  height: 80px;
+  background: #85C1E9;
+  bottom: -30px;
+  right: -30px;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .weather-widget {
+    padding: 30px 25px;
+  }
+
+  #temperature {
+    font-size: 48px;
+  }
+
+  #weatherIcon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .weather-widget input[type="text"] {
+    width: 70%;
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+
+  .weather-widget button {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+}
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7) saturate(1.1);
+  pointer-events: none;
+}

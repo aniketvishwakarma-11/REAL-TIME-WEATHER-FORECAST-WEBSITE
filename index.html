@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Weather Widget</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <video autoplay muted loop id="bgVideo">
+    <source src="weather-bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="weather-widget">
+    <h2>Find Weather of Your City</h2>
+    <input type="text" id="cityInput" placeholder="Enter city" />
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="weatherInfo">
+      <img id="weatherIcon" src="" alt="weather icon" style="display: none;" />
+      <h2 id="temperature"></h2>
+      <p id="description"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
