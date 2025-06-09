@@ -38,4 +38,7 @@ A sleek and minimalistic weather app built using **HTML**, **CSS**, and **JavaSc
 - **Background Video**: For modern UI feel
 
 ---
-
+## Contact
+For any queries or issues, feel free to reach out:
+- **Author**: Aniket Vishwakarma
+- **Email**: aniketvis675@gmail.com
